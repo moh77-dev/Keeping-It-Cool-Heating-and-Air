@@ -91,6 +91,64 @@ header{position:sticky;top:0;background:rgba(250,252,253,.92);backdrop-filter:bl
 .review p{margin:10px 0 14px}
 .review .who{font-family:var(--mono);font-size:.78rem;color:var(--slate)}
 
+
+/* nav links */
+.nav-links{display:flex;gap:18px}
+.nav-links a{font-size:.88rem;font-weight:500;text-decoration:none;color:var(--slate);transition:color .15s}
+.nav-links a:hover{color:var(--glacier-deep)}
+
+/* about / brothers */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-details h2{margin-bottom:14px}
+.about-values{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.about-val{padding:16px 18px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.about-val .v{font-family:var(--display);font-size:1.35rem;color:var(--glacier-deep);line-height:1.1}
+.about-val .l{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-top:5px}
+.about-icon{display:flex;flex-direction:column;align-items:center;gap:18px}
+.about-badge{width:200px;height:200px}
+
+/* repair vs replace */
+.rr-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:36px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.rr-col{padding:32px 28px;background:#fff}
+.rr-col.repair-col{border-right:1px solid var(--line)}
+.rr-col h3{font-size:1.15rem;margin-bottom:6px}
+.rr-col .subtitle{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;display:block}
+.rr-col .subtitle.cool{color:var(--glacier-deep)}
+.rr-col .subtitle.warm{color:var(--ember)}
+.rr-row{padding:11px 0;border-top:1px solid var(--line);font-size:.92rem;color:var(--slate)}
+.rr-verdict{margin-top:22px;padding:16px 18px;background:var(--frost);border-radius:10px;font-size:.92rem}
+
+/* maintenance tips */
+.tips-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:36px}
+.tip{border:1px solid var(--line);border-radius:12px;padding:26px 22px;background:#fff}
+.tip .season{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.tip .season.summer{color:var(--ember)}
+.tip .season.winter{color:var(--glacier-deep)}
+.tip .season.spring{color:var(--patina,#5E7468)}
+.tip .season.fall{color:#A0784C}
+.tip h3{font-size:1.05rem;margin-bottom:8px}
+.tip p{font-size:.92rem;color:var(--slate)}
+
+/* faq */
+.faq-list{max-width:740px;margin:36px auto 0}
+details{border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:12px;overflow:hidden}
+details summary{padding:18px 22px;font-family:var(--display);font-weight:600;font-size:1.02rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";font-family:var(--mono);font-size:1.2rem;color:var(--glacier);transition:transform .2s}
+details[open] summary::after{content:"\2212"}
+details .answer{padding:0 22px 20px;font-size:.93rem;color:var(--slate);line-height:1.65}
+
+/* service area */
+.area-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px}
+.area-tag{font-family:var(--mono);font-size:.82rem;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:#fff;text-align:center}
+
+/* cta banner */
+.cta-banner{text-align:center;padding:72px 24px;background:var(--ink);color:#fff}
+.cta-banner h2{color:#fff;margin-bottom:12px}
+.cta-banner p{color:#9FC3D2;max-width:520px;margin:0 auto 28px}
+.cta-banner .btn-primary{padding:16px 32px;font-size:1.05rem}
+.cta-banner .cta-note{font-family:var(--mono);font-size:.76rem;color:#6B8D9E;margin-top:14px}
+
 /* quote form */
 .quote-box{max-width:560px;margin:36px auto 0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px;box-shadow:0 8px 30px rgba(16,42,51,.06)}
 .progress{height:5px;background:var(--frost);border-radius:3px;margin-bottom:26px;overflow:hidden}
@@ -149,6 +207,14 @@ footer .mono{font-family:var(--mono);font-size:.85rem}
   .hero{padding:90px 0 80px;background-position:62% center}
   .hero::before{background:linear-gradient(180deg,rgba(11,28,36,.88) 0%,rgba(11,28,36,.72) 100%)}
   .cards,.steps,.reviews{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .about-grid{grid-template-columns:1fr}
+  .about-icon{order:-1}
+  .about-badge{width:160px;height:160px}
+  .rr-grid{grid-template-columns:1fr}
+  .rr-col.repair-col{border-right:none;border-bottom:1px solid var(--line)}
+  .tips-grid{grid-template-columns:1fr}
+  .area-grid{grid-template-columns:repeat(2,1fr)}
   footer .wrap{grid-template-columns:1fr}
   .nav-phone{display:none}
   .opt-grid{grid-template-columns:1fr}
@@ -170,6 +236,13 @@ footer .mono{font-family:var(--mono);font-size:.85rem}
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/C9UJTizCXsVlsRPO86wa0w/l.jpg" alt="Keeping It Cool Heating &amp; Air logo">Keeping It Cool <span style="font-weight:400;color:var(--slate)">Heating&nbsp;&amp;&nbsp;Air</span></a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#repair-replace">Repair vs replace</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
     <div class="nav-right">
       <a class="nav-phone" href="tel:+19099521237">(909) 952-1237</a>
       <a class="btn btn-primary btn-sm" href="#quote">Get a free quote</a>
@@ -236,8 +309,37 @@ footer .mono{font-family:var(--mono);font-size:.85rem}
   </div>
 </section>
 
+<!-- REPAIR VS REPLACE -->
+<section class="section tint" id="repair-replace">
+  <div class="wrap">
+    <span class="eyebrow">The honest question</span>
+    <h2>Should you repair it or replace it?</h2>
+    <p class="sub">A lot of companies push replacements because the ticket is bigger. We'll tell you which one actually makes sense for your situation — and here's how to think about it yourself.</p>
+    <div class="rr-grid">
+      <div class="rr-col repair-col">
+        <span class="subtitle cool">REPAIR MAKES SENSE WHEN</span>
+        <h3>Fix what you have</h3>
+        <div class="rr-row">The system is under 10–12 years old</div>
+        <div class="rr-row">It's a single known issue (capacitor, fan motor, refrigerant)</div>
+        <div class="rr-row">Repair cost is under 40% of a new system</div>
+        <div class="rr-row">The system has been well-maintained</div>
+        <div class="rr-verdict">Eddie has fixed ACs in under 20 minutes that other companies quoted a full replacement for. If it can be repaired honestly, that's what we'll recommend.</div>
+      </div>
+      <div class="rr-col">
+        <span class="subtitle warm">REPLACE MAKES SENSE WHEN</span>
+        <h3>Start fresh</h3>
+        <div class="rr-row">The system is 15+ years old with recurring issues</div>
+        <div class="rr-row">Repair costs are stacking up year over year</div>
+        <div class="rr-row">It uses R-22 refrigerant (phased out, expensive)</div>
+        <div class="rr-row">Energy bills have been climbing despite maintenance</div>
+        <div class="rr-verdict">When replacement is the right call, we right-size the new system to your actual home — not the biggest unit on the truck. Straight pricing, no surprises.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- HOW IT WORKS -->
-<section class="section tint">
+<section class="section" id="process">
   <div class="wrap">
     <span class="eyebrow">How the free quote works</span>
     <h2>About a minute of your time. Zero pressure.</h2>
@@ -261,6 +363,71 @@ footer .mono{font-family:var(--mono);font-size:.85rem}
   </div>
 </section>
 
+<!-- MEET THE BROTHERS -->
+<section class="section tint" id="about">
+  <div class="wrap about-grid">
+    <div class="about-details">
+      <span class="eyebrow">Family-owned &amp; operated</span>
+      <h2>Eddie and Tony. Two brothers, one standard.</h2>
+      <p class="sub" style="max-width:none">Keeping It Cool isn't a franchise with a call center — it's two brothers who answer the phone, show up on time, and do the work themselves. Eddie has been diagnosing and fixing HVAC systems for over a decade, and Tony is right there beside him. They built this business on the idea that honest pricing and clean work would speak for itself. Nine five-star Google reviews later, it has.</p>
+      <p class="sub" style="max-width:none;margin-top:12px">When you call Keeping It Cool, you talk to an owner. When they arrive, they're the ones doing the work. And when the job is done, they clean up after themselves — because that's how they were raised.</p>
+      <div class="about-values">
+        <div class="about-val"><div class="v">5.0</div><div class="l">Google rating</div></div>
+        <div class="about-val"><div class="v">10+</div><div class="l">Years experience</div></div>
+        <div class="about-val"><div class="v">MON–SAT</div><div class="l">6-day availability</div></div>
+        <div class="about-val"><div class="v">$0</div><div class="l">Quote cost</div></div>
+      </div>
+    </div>
+    <div class="about-icon">
+      <svg class="about-badge" viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="94" fill="none" stroke="#D8E5EB" stroke-width="3"/>
+        <circle cx="100" cy="100" r="82" fill="#E7F2F7"/>
+        <text x="100" y="80" text-anchor="middle" font-family="Sora,sans-serif" font-weight="700" font-size="42" fill="#1E8FB8">5.0</text>
+        <text x="100" y="100" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" letter-spacing="2" fill="#5B7280">STARS ON</text>
+        <text x="100" y="118" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" letter-spacing="2" fill="#5B7280">GOOGLE</text>
+        <g fill="#E2622B">
+          <text x="53" y="148" font-size="18">★</text>
+          <text x="72" y="148" font-size="18">★</text>
+          <text x="91" y="148" font-size="18">★</text>
+          <text x="110" y="148" font-size="18">★</text>
+          <text x="129" y="148" font-size="18">★</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- SEASONAL TIPS -->
+<section class="section" id="tips">
+  <div class="wrap">
+    <span class="eyebrow">Keep your system healthy</span>
+    <h2>Four things that prevent the emergency call.</h2>
+    <p class="sub">A little seasonal attention keeps your AC and heater running right — and keeps Eddie and Tony from seeing you in an emergency.</p>
+    <div class="tips-grid">
+      <div class="tip">
+        <span class="season summer">SPRING / SUMMER</span>
+        <h3>Change the air filter every 30–60 days</h3>
+        <p>A clogged filter is the single most common reason ACs blow warm. Set a phone reminder — it takes 30 seconds and saves hundreds in repair calls.</p>
+      </div>
+      <div class="tip">
+        <span class="season summer">SPRING / SUMMER</span>
+        <h3>Clear the outdoor condenser</h3>
+        <p>Trim plants back 2 feet from the unit and rinse debris off the fins with a garden hose. A choked condenser works twice as hard and wears out faster.</p>
+      </div>
+      <div class="tip">
+        <span class="season winter">FALL / WINTER</span>
+        <h3>Test your heater before you need it</h3>
+        <p>Run it for 15 minutes on the first cool day. Strange smells or no heat? Call now while there's no wait — not in December when everyone else does.</p>
+      </div>
+      <div class="tip">
+        <span class="season spring">YEAR-ROUND</span>
+        <h3>Schedule a yearly tune-up</h3>
+        <p>A professional check-up catches worn parts before they fail. It's the difference between a $150 tune-up and a $1,500 emergency repair in July.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- REVIEWS -->
 <section class="section" id="reviews">
   <div class="wrap">
@@ -279,11 +446,99 @@ footer .mono{font-family:var(--mono);font-size:.85rem}
       </div>
       <div class="review">
         <span class="stars">★★★★★</span>
+        <p>"Keeping It Cool was a lifesaver for my elderly mother's home. After dealing with another company who wouldn't resolve the issue, these guys came through."</p>
+        <span class="who">— M.O.C., Google review</span>
+      </div>
+      <div class="review">
+        <span class="stars">★★★★★</span>
+        <p>"Eddie has worked on two projects for us and done an amazing job. Extensive knowledge in AC and knows what he's doing. Great service all around."</p>
+        <span class="who">— Joseph C., Google review</span>
+      </div>
+      <div class="review">
+        <span class="stars">★★★★★</span>
         <p>"Fair prices, weekend service and prompt. Thank you very much!"</p>
         <span class="who">— J. Cortez, Google review</span>
       </div>
+      <div class="review">
+        <span class="stars">★★★★★</span>
+        <p>"Awesome, and very reasonable prices. Will definitely recommend to family and friends."</p>
+        <span class="who">— Jorge C., Google review</span>
+      </div>
     </div>
   </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <span class="eyebrow">Common questions</span>
+    <h2>What homeowners ask before calling.</h2>
+    <div class="faq-list">
+      <details>
+        <summary>How quickly can you get here?</summary>
+        <div class="answer">For urgent calls (no cooling in summer heat, for example), Eddie or Tony often arrive the same day — sometimes within a couple of hours. For non-urgent work, we'll schedule you within a few days at a time that works for you.</div>
+      </details>
+      <details>
+        <summary>Do you work on weekends?</summary>
+        <div class="answer">We're available Monday through Saturday. Sunday is our one day off. We hold Saturday slots specifically for urgent calls, so if your AC dies on a Friday night, you're not waiting until Monday.</div>
+      </details>
+      <details>
+        <summary>How much does a repair cost?</summary>
+        <div class="answer">It depends entirely on what's wrong — a capacitor replacement is very different from a compressor swap. What we can tell you: we diagnose honestly, quote fairly, and we've been told by multiple customers that our prices are "more than reasonable." We never push a replacement when a repair will do.</div>
+      </details>
+      <details>
+        <summary>Should I repair or replace my AC?</summary>
+        <div class="answer">Generally: if it's under 12 years old and the repair is a single known issue, repair. If it's 15+ years old with recurring problems or uses the old R-22 refrigerant, replacement usually makes more sense long-term. We break this down in detail in our repair vs. replace section above — and Eddie will always tell you honestly which makes more sense for your situation.</div>
+      </details>
+      <details>
+        <summary>What brands do you service?</summary>
+        <div class="answer">All major residential brands — Carrier, Lennox, Trane, Rheem, Goodman, York, Daikin, Bryant, Amana, and more. If it heats or cools your home, Eddie's seen it.</div>
+      </details>
+      <details>
+        <summary>Do I need a tune-up if my system seems fine?</summary>
+        <div class="answer">That's actually the best time to get one. A tune-up catches worn parts before they fail — it's the difference between a planned $150 visit and an emergency $1,500 repair in the middle of July. We recommend once a year, ideally before summer.</div>
+      </details>
+      <details>
+        <summary>Are you licensed and insured?</summary>
+        <div class="answer">Yes, fully licensed and insured. We're happy to provide documentation if your property manager or HOA requires it.</div>
+      </details>
+      <details>
+        <summary>What areas do you serve?</summary>
+        <div class="answer">We cover Ontario and the surrounding Inland Empire — Chino, Chino Hills, Montclair, Upland, Rancho Cucamonga, Pomona, Fontana, and nearby communities. If you're not sure whether you're in our area, call us and we'll let you know.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="section tint" id="area">
+  <div class="wrap">
+    <span class="eyebrow">Where we work</span>
+    <h2>Serving Ontario and the Inland Empire.</h2>
+    <p class="sub">If you're nearby and your AC isn't working, we can probably get there today.</p>
+    <div class="area-grid">
+      <div class="area-tag">Ontario</div>
+      <div class="area-tag">Chino</div>
+      <div class="area-tag">Chino Hills</div>
+      <div class="area-tag">Montclair</div>
+      <div class="area-tag">Upland</div>
+      <div class="area-tag">Rancho Cucamonga</div>
+      <div class="area-tag">Pomona</div>
+      <div class="area-tag">Fontana</div>
+      <div class="area-tag">Claremont</div>
+      <div class="area-tag">La Verne</div>
+      <div class="area-tag">Diamond Bar</div>
+      <div class="area-tag">Rialto</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <h2>Your comfort shouldn't wait until Monday.</h2>
+  <p>One call to Eddie or Tony. Honest pricing. Often fixed the same day.</p>
+  <a class="btn btn-primary" href="#quote">Get my free quote</a>
+  <p class="cta-note">Or call (909) 952-1237 · Mon–Sat, until 7 PM</p>
 </section>
 
 <!-- QUOTE FORM -->
@@ -479,7 +734,7 @@ async function node(id){
     chips([
       ["Get a free quote", 'A1'],
       ["My AC isn't cooling", 'C1'],
-      ["Pay a bill", 'B1'],
+      ["Maintenance tips", 'D1'],
       ["I just had service", 'B2'],
       ["Something else", 'other']
     ]);
@@ -557,6 +812,13 @@ async function node(id){
     break;
   case 'C_later':
     await bot("No problem — those two checks solve a surprising number of calls. If it's still warm after that, call " + BIZ.phone + " or come back here and I'll book you in seconds.");
+    break;
+
+  /* ----- Scenario D: maintenance tips ----- */
+  case 'D1':
+    await bot("Smart \u2014 a little prevention saves a lot of sweat. Here are the big three:\n\n1. Change your air filter every 30\u201360 days. A clogged filter is the number one reason ACs blow warm.\n\n2. Keep the outdoor condenser clear \u2014 trim plants back 2 feet and rinse off debris.\n\n3. Schedule a yearly tune-up before summer. It\u2019s the difference between a planned visit and a July emergency.");
+    await bot("Want to schedule a tune-up, or do you have a specific question?", 1200);
+    chips([["Schedule a tune-up", 'A1'], ["I have a question", 'other']]);
     break;
 
   /* ----- misc ----- */
